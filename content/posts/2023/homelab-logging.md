@@ -9,7 +9,7 @@ tags:
 Recently I wanted to capture some frequently used apps logs and do some basic analysis on those, some apps run in docker and some are going utilities, all don't have log file management functions. I have tested some logging products and finally, find the one that suits me.
 
 ## Splunk
-The first that comes to my mind is Splunk, it famous, has many advanced features and free to use for self-hosted, and is [supported by](https://docs.docker.com/config/containers/logging/splunk/) docker](https://docs.docker.com/config/containers/logging/splunk/) natively. I started to run it as a docker service on my QNAP NAS server, it's very easy to follow the official guide, just one thing to mention: don't forget to disable **Enable SSL** option in the **HTTP Event Collector** Global Settings page if you are not serving with HTTPS, it takes me some time to figure out why my logs not sending to it.
+The first that comes to my mind is Splunk, it famous, has many advanced features and free to use for self-hosted, and is [supported by docker](https://docs.docker.com/config/containers/logging/splunk/) natively. I started to run it as a docker service on my QNAP NAS server, it's very easy to follow the official guide, just one thing to mention: don't forget to disable **Enable SSL** option in the **HTTP Event Collector** Global Settings page if you are not serving with HTTPS, it takes me some time to figure out why my logs not sending to it.
 
 After setup, just run your docker command as the official example from docker(link in the above paragraph), for me I added 2 additional opts:
 
