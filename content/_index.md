@@ -1,5 +1,12 @@
+## ABOUT
+
 Hi, this is ZHANG Tai. A full-time DevOps engineer(Jenkins Admin) living in Guangzhou, China.
 
-I like to spend my spare time playing around with my homelab server and IoT devices.
+## NOW
 
-My name in Chinese is 张泰. My given name was given by my grandma and I am very proud of it. It is too special to have a Hexagram symbol: ䷊, which means peace.
+- Happily living with family
+- Learning **Ollama** and **LlamaIndex**
+- Learning **Grafana Tempo**
+- Playing k3s in my homelab
+- Tweak smart home devices with **Home Assistant**
+- Infinitely rethink how to take my notes with the right tool...
