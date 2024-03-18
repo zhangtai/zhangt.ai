@@ -2,6 +2,8 @@
 
 Hi, this is ZHANG Tai. A full-time DevOps engineer(Jenkins Admin) living in Guangzhou, China.
 
+## TOOLS
+
 - Computer: MacBook
 - Phone: iPhone
 - Homelab Servers: Beelink SER6 Pro 7735HS(32G+2TB), RaspberryPi5
@@ -19,8 +21,8 @@ Hi, this is ZHANG Tai. A full-time DevOps engineer(Jenkins Admin) living in Guan
   - k3s
     - Jenkins
 - Code Editor: helix, VSCode
-- Shell: zsh
-- Dotfiles manager: p10k
+- Shell: zsh with ohmyzsh and p10k
+- Dotfiles manager: chezmoi
 
 ## NOW
 

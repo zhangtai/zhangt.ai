@@ -20,10 +20,16 @@
   weight = 20
 
 [[main]]
+  name = "Home Assistant"
+  parent = "Page"
+  pageRef = "pages/home-assistant"
+  weight = 30
+
+[[main]]
   name = "Note Taking"
   parent = "Page"
   pageRef = "pages/note-taking"
-  weight = 20
+  weight = 31
 
 #[[main]]
 #  name = "example sub-menu 2"
