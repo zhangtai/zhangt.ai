@@ -4,31 +4,29 @@ Hi, this is ZHANG Tai. A full-time DevOps engineer(Jenkins Admin) living in Guan
 
 ## TOOLS
 
-- Computer: MacBook
+- Computer: macOS
 - Phone: iPhone
 - Homelab Servers: Beelink SER6 Pro 7735HS(32G+2TB), RaspberryPi5
-- NAS: QNAP TS-464C(4*4TB)
-- Services running in Homelab:
+- Cloud Server: Mostly used for proxies, in HK an US
+- Code Editor: Neovim(AstroNvim), VSCode
+- Shell: zsh with ohmyzsh and p10k
+- Dotfiles manager: chezmoi
+- Self-hosted services:
   - OpenWrt
   - Home Assistant
   - Code Server
   - owntracks
   - gatus
   - Outline
+  - Memos
   - baikal
-  - Proxy Client
-  - Rathole Client
+  - Proxy
+  - Rathole
   - k3s
     - Jenkins
-- Code Editor: helix, VSCode
-- Shell: zsh with ohmyzsh and p10k
-- Dotfiles manager: chezmoi
 
 ## NOW
 
-- Happily living with family
-- Learning **Ollama** and **LlamaIndex**
-- Learning **Grafana Tempo**
-- Playing k3s in my homelab
 - Tweak smart home devices with **Home Assistant**
 - Infinitely rethink how to take my notes with the right tool...
+- Learning Remix and Radix
