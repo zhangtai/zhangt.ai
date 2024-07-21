@@ -1,32 +1,18 @@
 ## ABOUT
 
-Hi, this is ZHANG Tai. A full-time DevOps engineer(Jenkins Admin) living in Guangzhou, China.
+Hi there! I’m Tai Zhang, a DevOps engineer(Jenkins Administrator) passionate about cloud computing and automation. Recently, I've been delving into Rust, enjoying the challenge of building applications with it.
 
-## TOOLS
+Originally from Yilan in Heilongjiang province, I now live in Guangzhou with my wife and our son. Outside of work, I’ve created a home automation system using Home Assistant, integrating it with Grafana for visualization and alerting.
 
-- Computer: macOS
-- Phone: iPhone
-- Homelab Servers: Beelink SER6 Pro 7735HS(32G+2TB), RaspberryPi5
-- Cloud Server: Mostly used for proxies, in HK an US
-- Code Editor: Neovim(AstroNvim), VSCode
-- Shell: zsh with ohmyzsh and p10k
-- Dotfiles manager: chezmoi
-- Self-hosted services:
-  - OpenWrt
-  - Home Assistant
-  - Code Server
-  - owntracks
-  - gatus
-  - Outline
-  - Memos
-  - baikal
-  - Proxy
-  - Rathole
-  - k3s
-    - Jenkins
+I’m also involved in a professional development program that’s enhancing my technical and leadership skills through impactful projects and refined problem-solving.
 
-## NOW
+In my spare time, I love spending quality moments with my family. We’re planning a trip to Yilan soon, hoping to escape the Guangzhou heat and enjoy some cooler weather.
 
-- Tweak smart home devices with **Home Assistant**
-- Infinitely rethink how to take my notes with the right tool...
-- Learning Remix and Radix
+Thanks for visiting my blog!
+
+(Enhanced by ChatGPT)
+
+## Now
+
+- prep for CKAD exam
+- prep visa application for India
