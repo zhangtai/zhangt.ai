@@ -53,6 +53,7 @@ showTableOfContents = false
 showTaxonomies = false
 showAuthorsBadges = false
 showWordCount = true
+# sharingLinks = [ "linkedin", "twitter", "bluesky", "mastodon", "reddit", "pinterest", "facebook", "email", "whatsapp", "telegram"]
 showZenMode = false
 
 [list]
@@ -72,11 +73,12 @@ cardViewScreenWidth = false
 constrainItemsWidth = false
 
 [sitemap]
-excludedKinds = [ "taxonomy", "term" ]
+excludedKinds = ["taxonomy", "term"]
 
 [taxonomy]
 showTermCount = true
 showHero = false
+# heroStyle = "background" # valid options: basic, big, background, thumbAndBackground
 showBreadcrumbs = false
 showViews = false
 showLikes = false
@@ -85,6 +87,7 @@ cardView = false
 
 [term]
 showHero = false
+# heroStyle = "background" # valid options: basic, big, background, thumbAndBackground
 showBreadcrumbs = false
 showViews = false
 showLikes = false
@@ -94,13 +97,43 @@ cardView = false
 cardViewScreenWidth = false
 
 [firebase]
+# apiKey = "XXXXXX"
+# authDomain = "XXXXXX"
+# projectId = "XXXXXX"
+# storageBucket = "XXXXXX"
+# messagingSenderId = "XXXXXX"
+# appId = "XXXXXX"
+# measurementId = "XXXXXX"
 
 [fathomAnalytics]
+# site = "ABC12345"
+# domain = "llama.yoursite.com"
 
 [umamiAnalytics]
+# websiteid = "ABC12345"
+# domain = "llama.yoursite.com"
+# dataDomains = "yoursite.com,yoursite2.com"
+# scriptName = ""
+# enableTrackEvent = true
 
 [selineAnalytics]
+# token = "XXXXXX"
+# enableTrackEvent = true
 
 [buymeacoffee]
+# identifier = ""
+# globalWidget = true
+# globalWidgetMessage = "Hello"
+# globalWidgetColor = "#FFDD00"
+# globalWidgetPosition = "Right"
 
 [verification]
+# google = ""
+# bing = ""
+# pinterest = ""
+# yandex = ""
+# fediverse = ""
+
+[rssnext]
+# feedId = ""
+# userId = ""

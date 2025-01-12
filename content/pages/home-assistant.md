@@ -1,5 +1,5 @@
 ---
-title: Note Taking
+title: Home Assistant
 showDate: false
 showReadingTime: false
 showWordCount: false
