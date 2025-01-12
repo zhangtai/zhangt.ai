@@ -1,7 +1,6 @@
 ---
-title: Firefox updates reduced my installed extension numbers
+title: "Firefox Reborn: Why I'm Back and Better Than Ever"
 date: 2025-01-13
-description: Firefox's recent update with new features and some extensions funcitonality discovery reduced number of my extionsions installed
 ---
 
 Firefox's recent update with new features and some extensions
@@ -60,6 +59,26 @@ to enable the split view in Firefox and there are multiple can do is
 just to open page in sidebar and manual resize, it not like Edge managed
 natively, nevery mentioning the amazingly Arc, which can open tabs side
 by side up to 4! But it's very good to have in Tridactyl because it has
-the unique feature, programmatically opening and toggle.
+the unique feature: programmatically opening and toggle. It can open any
+URL by predefined or dynamically by prgramming. e.g. duplicate the
+current webpage in sidebar, or open Raindrop.io or Twosapp website. So I
+can uninstall the Raindrop.io extension(because you can bind command to
+save bookmarks with JavaScript) and Twosapp(Oh there is no such
+extension! That's another bonus, you don't need that non-existing
+extension).
 
-TBC.
+## Summary
+
+So after combining the latest Firefox and Tridactyl I no longer need
+those extensions anymore(Although they are all good and helped my a lot):
+
+- Sidebery
+- Page Sidebar
+- Raindrop
+- Violentmonkeuy
+
+So what's left after the cleanup?
+
+- uBlock Origin
+- Tridactyl
+- iCloud Passwords
