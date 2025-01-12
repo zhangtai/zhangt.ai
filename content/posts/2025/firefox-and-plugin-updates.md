@@ -1,84 +1,65 @@
 ---
-title: "Firefox Reborn: Why I'm Back and Better Than Ever"
-date: 2025-01-13
+title: How Firefox Updates Changed My Extension Usage
+subtitle: A Personal Experience with Firefox's New Features
+date: 2025-01-12
 ---
 
-Firefox's recent update with new features and some extensions
-funcitonality discovery reduced number of my extionsions installed.
+Firefox’s recent updates, packed with new features and functionality improvements, have significantly reduced the number of extensions I use. Here’s a look at how these changes transformed my browsing experience.
 
-## New features and extensions
+## Embracing New Features and Improvements
 
-Firefox has always been my favourite browser, I use it ALMOST
-all the time due to it's very open to customization, but it's
-not perfect and always has a lot of annoying issues annoys users
-many years you may even feels like Mozilla even don't cares.
-Actually they do care but just slow to reponse, or have other
-more higher priority tasks. But as per my perspective seems all
-things speed up at the 2nd half of 2024 at Firefox, not only by
-Mozilla but also the community, some of my very annoyed issues been
-fixed, and actually just because those issues I keeps switching to
-Safari/Edge/Chrome/Arc, or some other-fox browsers e.g. Floorp/Zen.
-And now after few months of using the current Firefox I am confident
-that I will reduce a lot of time for jumping between each browsers
-and writing a table to compare which browser should I use as my main.
+Firefox has long been my favorite browser, thanks to its extensive customization options. However, it hasn’t always been smooth sailing. Over the years, numerous bugs and frustrating issues have made me question Mozilla’s responsiveness. Despite these challenges, the pace of updates and fixes seemed to accelerate in the latter half of 2024. It felt like both Mozilla and the community were working tirelessly to improve Firefox.
 
-Here are some new features released recently I am very glad to have:
+Previously, I often switched between browsers like Safari, Edge, Chrome, Arc, or even alternative Firefox-based browsers like Floorp and Zen. Now, after a few months with the latest version of Firefox, I’m confident it can meet most of my needs without constant browser-hopping or keeping a comparison chart of features.
 
-- Vertial tabs and tabs group: Pretty happy with the Sidebery plugin
-  and the current native implement is less powerful, but I still prefer
-  the native because it meets my most basic requirements
-- Password filling from iCloud: by the iCloud Passwords plugin
-  released recently I don't need to right click and AutoFill
-  passwords again(It's not **Auto** at all...)
-- Text Replacement: It should been here since so many years back,
-  back better than never. And, the function breaks at v134 release,
-  hopefully they will fix soon
-- CLI: The firefox binary don't provide interactive with the current
-  opening window or tabs, but the `mozeidon` app provides basic
-  function to retrieve the current browser stats, e.g. opening tabs
-  information and basic control
+### Features I’m Excited About
 
-But still better to have if possible:
+1. **Vertical Tabs and Tab Groups**\
+   While the Sidebery extension offers more advanced features, Firefox’s native implementation covers my basic needs and feels more streamlined.
 
-- Native split view
-- Bring back official PWA support
+2. **iCloud Password Autofill**\
+   With the iCloud Passwords extension, I no longer have to right-click to “AutoFill” passwords manually (which was anything but “Auto”). This saves time and simplifies my workflow.
 
-## Tridactyl
+3. **Text Replacement**\
+   This feature should have been available years ago, but better late than never. Unfortunately, it’s currently broken in version 134. I’m hopeful for a fix soon.
 
-Tridactyl like another system within Firefox, it's so powerful!
-But I stopped using it maybe half years ago due to it conflict with
-another very important website I use daily and no way to fix it except
-disable it totally. Recently as I again using Firefox as my primary
-browser I want to try it again, this time I download and installed the
-beta/nightly build, because the stable version was same when I left.
-And the old issue just solved magically, I don't know it's fixed by the
-website or Tridactyl, but very happy anyway because I can use it again.
-When I playing around just found the feature to toggle and open url in
-the sidebar, that was amazying! Because I spent some time to find plugin
-to enable the split view in Firefox and there are multiple can do is
-just to open page in sidebar and manual resize, it not like Edge managed
-natively, nevery mentioning the amazingly Arc, which can open tabs side
-by side up to 4! But it's very good to have in Tridactyl because it has
-the unique feature: programmatically opening and toggle. It can open any
-URL by predefined or dynamically by prgramming. e.g. duplicate the
-current webpage in sidebar, or open Raindrop.io or Twosapp website. So I
-can uninstall the Raindrop.io extension(because you can bind command to
-save bookmarks with JavaScript) and Twosapp(Oh there is no such
-extension! That's another bonus, you don't need that non-existing
-extension).
+4. **Command Line Interface (CLI) with Mozeidon**\
+   Although Firefox’s binary lacks interactive CLI support for open windows or tabs, the Mozeidon app bridges this gap, providing insights into browser stats and basic controls.
 
-## Summary
+### Features I’d Still Like to See
 
-So after combining the latest Firefox and Tridactyl I no longer need
-those extensions anymore(Although they are all good and helped my a lot):
+- **Native Split View**
+- **Official PWA Support, again**
+
+## Rediscovering Tridactyl
+
+Tridactyl is like having a mini operating system within Firefox. It’s incredibly powerful, but I stopped using it about six months ago because of a conflict with a crucial website. Thankfully, after installing the beta/nightly version recently, the issue resolved itself—perhaps due to updates in Tridactyl or the website.
+
+While exploring its features, I discovered Tridactyl’s ability to toggle and open URLs in the sidebar programmatically. This was a game-changer! It works like a basic split view by opening pages in the sidebar, which you can resize manually. While it’s not as advanced as Edge’s native split view or Arc’s ability to open up to four tabs side-by-side, Tridactyl’s programmability adds unique functionality.
+
+For example, I can:
+
+- Duplicate the current page in the sidebar
+- Open Raindrop.io or Twosapp without needing their extensions
+- Bind commands to JavaScript for saving bookmarks or performing custom actions
+
+This allowed me to uninstall several extensions, simplifying my setup.
+
+## Simplified Setup: Extensions I No Longer Need
+
+With the combined power of the latest Firefox and Tridactyl, I’ve cleaned up my extensions list. Here are the ones I removed:
 
 - Sidebery
 - Page Sidebar
-- Raindrop
-- Violentmonkeuy
+- Raindrop.io
+- Violentmonkey
 
-So what's left after the cleanup?
+### What’s Left
 
 - uBlock Origin
 - Tridactyl
 - iCloud Passwords
+
+## Conclusion
+
+The recent updates to Firefox and Tridactyl have not only enhanced my browsing experience but also streamlined my workflow. With fewer extensions to manage, Firefox feels faster and more focused. I’m excited to see how Mozilla continues to improve this already fantastic browser.
