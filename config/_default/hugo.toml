@@ -1,0 +1,6 @@
+baseURL = 'https://zhangt.ai/'
+languageCode = 'zh-cn'
+title = '张泰的网站'
+theme = 'zhangtai'
+
+contentdir = '/Users/tying/Notes/Blog'
