@@ -1,8 +1,13 @@
 {{ define "main" }}
-  <h1>{{ .Title }}</h1>
-  {{ .Content }}
-  {{ range .Pages }}
-    <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
-    {{ .Summary }}
-  {{ end }}
+  <div class="container mx-auto py-8 bg-white dark:bg-gray-900">
+    <h1 class="text-3xl font-bold mb-4">{{ .Title }}</h1>
+
+    <ul class="space-y-4">
+      {{ range .Paginator.Pages }}
+        {{ .Render "summary" }}
+      {{ end }}
+    </ul>
+
+    {{ partial "pagination.html" . }}
+  </div>
 {{ end }}
