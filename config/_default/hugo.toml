@@ -1,6 +1,9 @@
 baseURL = 'https://zhangt.ai/'
 languageCode = 'zh-cn'
-title = '张泰的网站'
+title = '张泰'
 theme = 'zhangtai'
 
-contentdir = '/home/zhangtai/webdav/Notes/Blog'
+contentdir = '/home/zhangtai/webdav/space/Blogs'
+
+[markup.goldmark.renderer]
+unsafe = true
