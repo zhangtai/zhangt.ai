@@ -5,5 +5,16 @@ theme = 'zhangtai'
 
 contentdir = '/home/zhangtai/webdav/space/Blogs'
 
+[[menus.main]]
+name = '主页'
+pageRef = '/'
+weight = 10
+
+[[menus.main]]
+name = '博客'
+pageRef = '/posts'
+weight = 20
+
+
 [markup.goldmark.renderer]
 unsafe = true
