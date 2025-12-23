@@ -1,20 +1,20 @@
 // @ts-check
 import react from "@astrojs/react";
+import mdx from '@astrojs/mdx';
+import sitemap from '@astrojs/sitemap';
 import tailwindcss from "@tailwindcss/vite";
 import { defineConfig } from "astro/config";
 
-const site = process.env.VERCEL
-  ? process.env.VERCEL_ENV === "production"
-    ? "https://astro-shadcn-ui-template.vercel.app"
-    : `https://${process.env.VERCEL_URL}`
-  : (process.env.SITE ?? "http://localhost:4321");
+const site = process.env.HOSTNAME === "dmit"
+    ? "https://zhangt.ai"
+    : "http://localhost:4321";
 const base = process.env.BASE || "/";
 
 // https://astro.build/config
 export default defineConfig({
   site,
   base,
-  integrations: [react()],
+  integrations: [mdx(), sitemap(), react()],
   vite: {
     plugins: [tailwindcss()],
   },
