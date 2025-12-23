@@ -13,7 +13,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
 const siteTitle = title ?? "Default Site Title";
 const siteDescription = description ?? "Default description for your website.";
 const siteOgImage = ogImage ?? new URL("og-image.png", canonicalURL);
-const faviconURL = new URL("favicon.avif", canonicalURL).toString();
+const faviconURL = new URL("/favicon.avif", canonicalURL).toString();
 ---
 
 <meta charset="utf-8" />
