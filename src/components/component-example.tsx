@@ -47,14 +47,13 @@ function CardExample() {
       <Card className="relative w-full max-w-sm overflow-hidden pt-0">
         <img
           src="zhangtai-ts-2048.avif"
-          alt="Photo by mymind on Unsplash"
-          title="Photo by mymind on Unsplash"
+          alt="Zhang Tai in the simpsons style"
+          title="Zhang Tai in the simpsons style"
         />
         <CardHeader>
-          <CardTitle>Observability Plus is replacing Monitoring</CardTitle>
+          <CardTitle>你好👋🏻欢迎👏</CardTitle>
           <CardDescription>
-            Switch to the improved way to explore your data, with natural language. Monitoring will
-            no longer be available on the Pro plan in November, 2025
+            我叫张泰，从事软件相关工作，和家人一起生活在广州，建站的目的是想记录点我感兴趣的事情让朋友能更了解我，所以没有特定主题。
           </CardDescription>
         </CardHeader>
         <CardFooter>
