@@ -1,6 +1,9 @@
 ---
 import { ComponentExample } from "@/components/component-example";
 import BaseLayout from "@/layouts/BaseLayout.astro";
+import { Separator } from "@/components/ui/separator";
+import Recent from "@/components/Recent.astro";
+import { ExampleWrapper } from "@/components/example";
 ---
 
 <BaseLayout
@@ -8,4 +11,8 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
   description="This template helps you build apps with Astro, Tailwind CSS, and shadcn/ui."
 >
   <ComponentExample />
+  <Separator />
+  <div class="mx-auto grid w-full max-w-5xl min-w-0 content-center items-start p-4 pt-2 sm:gap-12 sm:p-6 md:grid-cols-1 md:gap-8 lg:p-12">
+    <Recent />
+  </div>
 </BaseLayout>
