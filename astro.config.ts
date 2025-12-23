@@ -18,4 +18,7 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
   },
+  image: {
+    domains: ["zhangtai.oss-cn-guangzhou.aliyuncs.com"],
+  }
 });
