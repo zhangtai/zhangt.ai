@@ -6,8 +6,10 @@ import tailwindcss from "@tailwindcss/vite";
 import { defineConfig } from "astro/config";
 
 const site = process.env.CF_PAGES
-  ? "https://zhangt.ai"
-  : "http://localhost:4321";
+  ? "https://zhangt-ai.pages.dev"
+    : process.env.HOSTNAME === "dmit"
+      ? "https://zhangt.ai"
+      : "http://localhost:4321";
 const base = process.env.BASE || "/";
 
 // https://astro.build/config
