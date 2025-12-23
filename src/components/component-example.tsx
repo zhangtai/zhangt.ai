@@ -43,7 +43,7 @@ export function ComponentExample() {
 
 function CardExample() {
   return (
-    <Example title="Card" className="items-center justify-center">
+    <Example title="Bio" className="items-center justify-center">
       <Card className="relative w-full max-w-sm overflow-hidden pt-0">
         <img
           src="zhangtai-ts-2048.avif"
@@ -86,7 +86,7 @@ function FormExample() {
   const [theme, setTheme] = React.useState("light");
 
   return (
-    <Example title="Form">
+    <Example title="Attr">
       <Card className="w-full max-w-md">
         <CardHeader>
           <CardTitle>User Information</CardTitle>
