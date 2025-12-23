@@ -1,4 +1,6 @@
 ---
+import { Image } from "astro:assets";
+
 interface RecentItem {
   id: string;
   type: "book" | "music" | "movie" | "game";
@@ -39,11 +41,12 @@ const recentItems: RecentItem[] = [
       recentItems.map((item) => (
         <div class="flex items-start gap-4 rounded-lg border p-3 shadow-sm transition-colors hover:bg-muted/50">
           <div class="shrink-0">
-            <img
+            <Image
               src={item.thumbnail}
               alt={item.title}
+              width={256}
+              height={384}
               class="h-24 w-16 rounded-md object-cover shadow-sm"
-              loading="lazy"
             />
           </div>
           <div class="flex flex-col gap-1">
