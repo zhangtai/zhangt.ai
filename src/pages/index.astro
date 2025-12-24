@@ -1,17 +1,48 @@
 ---
-import { ComponentExample } from "@/components/component-example";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import { Separator } from "@/components/ui/separator";
 import Recent from "@/components/Recent.astro";
+import ProfileImage from "../assets/zhangtai.svg";
+import { FormExample } from "@/components/component-example";
+import { Badge } from "@/components/ui/badge";
+import {
+  Card,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 ---
 
 <BaseLayout
   title="张泰的主页 | zhangt.ai"
   description="This template helps you build apps with Astro, Tailwind CSS, and shadcn/ui."
 >
-  <ComponentExample />
+  <div class="bg-background w-full">
+    <div class="mx-auto grid w-full max-w-5xl min-w-0 content-center items-start gap-8 p-4 pt-2 sm:gap-12 sm:p-6 md:grid-cols-2 md:gap-8 lg:p-12 2xl:max-w-6xl">
+        <Card className="relative w-full max-w-sm overflow-hidden pt-0">
+          <!-- <Image src={profileImage} alt="Profile picture" /> -->
+           <ProfileImage />
+          <CardHeader>
+            <CardTitle>你好👋🏻欢迎👏</CardTitle>
+            <CardDescription>
+              我叫张泰，从事软件相关工作，和家人一起生活在广州，建站的目的是想记录点我感兴趣的事情让朋友能更了解我，所以没有特定主题。
+            </CardDescription>
+          </CardHeader>
+          <CardFooter>
+            <Badge variant="secondary" className="ml-auto">Happy</Badge>
+            <Badge variant="secondary" className="ml-1">Father</Badge>
+            <Badge variant="secondary" className="ml-1">Chinese</Badge>
+            <Badge variant="secondary" className="ml-1">He/Him</Badge>
+          </CardFooter>
+        </Card>
+      <FormExample />
+    </div>
+  </div>
   <Separator />
-  <div class="mx-auto grid w-full max-w-5xl min-w-0 content-center items-start p-4 pt-2 sm:gap-12 sm:p-6 md:grid-cols-1 md:gap-8 lg:p-12">
+  <div
+    class="mx-auto grid w-full max-w-5xl min-w-0 content-center items-start p-4 pt-2 sm:gap-12 sm:p-6 md:grid-cols-1 md:gap-8 lg:p-12"
+  >
     <Recent />
   </div>
 </BaseLayout>

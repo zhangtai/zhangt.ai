@@ -6,7 +6,6 @@ import FormattedDate from "../../components/FormattedDate.astro";
 import Header from "../../components/Header.astro";
 import { SITE_DESCRIPTION, SITE_TITLE } from "../../consts";
 import BaseLayout from "@/layouts/BaseLayout.astro";
-import { ExampleWrapper } from "@/components/example";
 const posts = (await getCollection("blog")).sort(
 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
@@ -16,7 +15,9 @@ const posts = (await getCollection("blog")).sort(
 	title="张泰的博客 | zhangt.ai"
 	description="This template helps you build apps with Astro, Tailwind CSS, and shadcn/ui."
 >
-	<ExampleWrapper>
+	<div
+		class="mx-auto grid w-full max-w-5xl min-w-0 content-center items-start gap-8 p-4 pt-2 sm:gap-12 sm:p-6 md:grid-cols-2 md:gap-8 lg:p-12 2xl:max-w-6xl"
+	>
 		<section>
 			<ul>
 				{
@@ -33,5 +34,5 @@ const posts = (await getCollection("blog")).sort(
 				}
 			</ul>
 		</section>
-	</ExampleWrapper>
+	</div>
 </BaseLayout>

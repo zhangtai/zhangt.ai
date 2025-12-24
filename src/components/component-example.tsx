@@ -1,14 +1,9 @@
-import * as React from "react";
-
-import { Example, ExampleWrapper } from "@/components/example";
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
   Card,
   CardAction,
   CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
@@ -32,41 +27,6 @@ import {
 } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
 
-export function ComponentExample() {
-  return (
-    <ExampleWrapper>
-      <CardExample />
-      <FormExample />
-    </ExampleWrapper>
-  );
-}
-
-function CardExample() {
-  return (
-    <Example title="Bio" className="items-center justify-center">
-      <Card className="relative w-full max-w-sm overflow-hidden pt-0">
-        <img
-          src="zhangtai-ts-2048.avif"
-          alt="Zhang Tai in the simpsons style"
-          title="Zhang Tai in the simpsons style"
-        />
-        <CardHeader>
-          <CardTitle>你好👋🏻欢迎👏</CardTitle>
-          <CardDescription>
-            我叫张泰，从事软件相关工作，和家人一起生活在广州，建站的目的是想记录点我感兴趣的事情让朋友能更了解我，所以没有特定主题。
-          </CardDescription>
-        </CardHeader>
-        <CardFooter>
-          <Badge variant="secondary" className="ml-auto">Happy</Badge>
-          <Badge variant="secondary" className="ml-1">Father</Badge>
-          <Badge variant="secondary" className="ml-1">Chinese</Badge>
-          <Badge variant="secondary" className="ml-1">He/Him</Badge>
-        </CardFooter>
-      </Card>
-    </Example>
-  );
-}
-
 const frameworks = ["Next.js", "SvelteKit", "Nuxt.js", "Remix", "Astro"] as const;
 
 const roleItems = [
@@ -76,20 +36,12 @@ const roleItems = [
   { label: "Other", value: "other" },
 ];
 
-function FormExample() {
-  const [notifications, setNotifications] = React.useState({
-    email: true,
-    sms: false,
-    push: true,
-  });
-  const [theme, setTheme] = React.useState("light");
-
+export function FormExample() {
   return (
-    <Example title="Attr">
       <Card className="w-full max-w-md">
         <CardHeader>
-          <CardTitle>User Information</CardTitle>
-          <CardDescription>Please fill in your details below</CardDescription>
+          <CardTitle>个人信息</CardTitle>
+          <CardDescription>以下内容为只读</CardDescription>
           <CardAction>
           </CardAction>
         </CardHeader>
@@ -153,6 +105,5 @@ function FormExample() {
           </form>
         </CardContent>
       </Card>
-    </Example>
   );
 }
