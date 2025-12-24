@@ -27,7 +27,7 @@ import {
 } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
 
-export function FormExample() {
+export function Attributes() {
   return (
       <Card className="w-full max-w-md">
         <CardHeader>
