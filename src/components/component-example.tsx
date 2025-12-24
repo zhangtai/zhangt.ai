@@ -27,15 +27,6 @@ import {
 } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
 
-const frameworks = ["Next.js", "SvelteKit", "Nuxt.js", "Remix", "Astro"] as const;
-
-const roleItems = [
-  { label: "Developer", value: "developer" },
-  { label: "Designer", value: "designer" },
-  { label: "Manager", value: "manager" },
-  { label: "Other", value: "other" },
-];
-
 export function FormExample() {
   return (
       <Card className="w-full max-w-md">
@@ -55,17 +46,13 @@ export function FormExample() {
                 </Field>
                 <Field>
                   <FieldLabel htmlFor="small-form-role">Role</FieldLabel>
-                  <Select items={roleItems} defaultValue={"developer"}>
+                  <Select defaultValue={"developer"}>
                     <SelectTrigger id="small-form-role">
                       <SelectValue />
                     </SelectTrigger>
                     <SelectContent>
                       <SelectGroup>
-                        {roleItems.map((item) => (
-                          <SelectItem key={item.value} value={item.value}>
-                            {item.label}
-                          </SelectItem>
-                        ))}
+                        <SelectItem value="developer">Developer</SelectItem>
                       </SelectGroup>
                     </SelectContent>
                   </Select>
@@ -73,7 +60,7 @@ export function FormExample() {
               </div>
               <Field>
                 <FieldLabel htmlFor="small-form-framework">Framework</FieldLabel>
-                <Combobox items={frameworks} defaultValue={"Astro"}>
+                <Combobox items={["Astro"]} defaultValue={"Astro"}>
                   <ComboboxInput
                     id="small-form-framework"
                     placeholder="Select a framework"
