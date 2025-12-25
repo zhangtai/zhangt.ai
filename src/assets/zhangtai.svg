@@ -71,8 +71,8 @@
         <g id="Eyes">
             <path id="left-eyeball" serif:id="left eyeball"
                 d="M1637.5,1487.5c-6.054,3.274 110.053,52.928 174.043,49.955c90.464,-4.204 163.28,-28.663 175.957,-45.788c23.137,-31.255 -81.034,-109.497 -170.833,-104.167c-116.457,6.913 -192.457,90.969 -179.167,100Z"
-                style="fill:#fff;stroke:#212121;stroke-width:16.67px;transform-box: fill-box; transform-origin: center;">
-                <animateTransform attributeName="transform" type="scale" values="1 1; 1 0; 1 0; 1 1; 1 1"
+                style="fill:#fff;stroke:#212121;stroke-width:6px;transform-box: fill-box; transform-origin: center;" vector-effect="non-scaling-stroke">
+                <animateTransform attributeName="transform" type="scale" values="1 1; 1 0.1; 1 0.1; 1 1; 1 1"
                     keyTimes="0; 0.05; 0.15; 0.2; 1" dur="2s" repeatCount="indefinite" additive="sum" />
             </path>
             <ellipse id="left-pupil" serif:id="left pupil" cx="1810.417" cy="1454.167" rx="31.25" ry="29.167"
@@ -82,8 +82,8 @@
             </ellipse>
             <path id="right-eyeball" serif:id="right eyeball"
                 d="M2629.167,1483.333c0,0 -73.336,46.173 -179.167,50c-51.826,1.874 -177.995,-30.171 -162.5,-54.167c15.495,-23.996 50.145,-90.825 175,-87.5c124.855,3.325 156.401,68.432 166.667,91.667"
-                style="fill:#fff;stroke:#212121;stroke-width:16.67px;transform-box: fill-box; transform-origin: center;">
-                <animateTransform attributeName="transform" type="scale" values="1 1; 1 0; 1 0; 1 1; 1 1"
+                style="fill:#fff;stroke:#212121;stroke-width:6px;transform-box: fill-box; transform-origin: center;" vector-effect="non-scaling-stroke">
+                <animateTransform attributeName="transform" type="scale" values="1 1; 1 0.1; 1 0.1; 1 1; 1 1"
                     keyTimes="0; 0.05; 0.15; 0.2; 1" dur="2s" repeatCount="indefinite" additive="sum" />
             </path>
             <ellipse id="right-pupil" serif:id="right pupil" cx="2452.083" cy="1454.167" rx="31.25" ry="29.167"
