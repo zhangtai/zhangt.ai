@@ -1,0 +1,77 @@
+---
+import { Button } from "@/components/ui/button";
+import {
+    Card,
+    CardAction,
+    CardContent,
+    CardDescription,
+    CardFooter,
+    CardHeader,
+    CardTitle,
+} from "@/components/ui/card";
+
+import { Field, FieldGroup, FieldLabel } from "@/components/ui/field";
+import { Input } from "@/components/ui/input";
+import { UserTags, Framework, Role } from "@/components/attributes";
+import ProfileImage from "../assets/zhangtai.svg";
+import JourneyImage from "../assets/journey.svg";
+---
+
+<div class="bg-background w-full">
+    <div
+        class="mx-auto grid w-full max-w-5xl min-w-0 content-center items-start gap-8 p-4 pt-2 sm:gap-12 sm:p-6 md:grid-cols-2 md:gap-8 lg:p-12 2xl:max-w-6xl"
+    >
+        <Card className="relative w-full max-w-md overflow-hidden pt-0">
+            <ProfileImage />
+            <CardHeader>
+                <CardTitle>你好👋🏻欢迎👏</CardTitle>
+                <CardDescription>
+                    我叫张泰，从事软件相关工作，和家人一起生活在广州，建站的目的是想记录点我感兴趣的事情让朋友能更了解我，所以没有特定主题。
+                </CardDescription>
+            </CardHeader>
+            <CardFooter> ... </CardFooter>
+        </Card>
+
+        <Card className="w-full max-w-md">
+            <CardHeader>
+                <CardTitle>个人信息</CardTitle>
+                <CardDescription>以下内容为只读</CardDescription>
+                <CardAction />
+            </CardHeader>
+            <CardContent>
+                <form>
+                    <FieldGroup>
+                        <div class="grid grid-cols-2 gap-4">
+                            <Field>
+                                <FieldLabel htmlFor="small-form-name"
+                                    >姓名</FieldLabel
+                                >
+                                <Input
+                                    id="small-form-name"
+                                    placeholder="张泰"
+                                    required
+                                    disabled
+                                />
+                            </Field>
+                            <Role />
+                        </div>
+                        <Framework />
+                        <UserTags />
+                        <Field>
+                            <FieldLabel htmlFor="small-form-name"
+                                >位置</FieldLabel
+                            >
+                            <JourneyImage />
+                        </Field>
+                        <Field orientation="horizontal">
+                            <Button>Submit</Button>
+                            <Button variant="outline" type="button">
+                                Cancel
+                            </Button>
+                        </Field>
+                    </FieldGroup>
+                </form>
+            </CardContent>
+        </Card>
+    </div>
+</div>

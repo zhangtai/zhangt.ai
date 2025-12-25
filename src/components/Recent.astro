@@ -15,51 +15,64 @@ const recentItems: RecentItem[] = [
     id: "1",
     type: "movie",
     title: "Zootopia 2",
-    thumbnail: "https://zhangtai.oss-cn-guangzhou.aliyuncs.com/public/img/zootopia-2-poster.avif",
+    thumbnail:
+      "https://zhangtai.oss-cn-guangzhou.aliyuncs.com/public/img/zootopia-2-poster.avif",
     comment: "2025-12: 感觉狐狸的话有点少，更期待他多些出场",
   },
   {
     id: "2",
     type: "game",
     title: "Microsoft Flight Simulator 2024",
-    thumbnail: "https://zhangtai.oss-cn-guangzhou.aliyuncs.com/public/img/ms-fs2024.avif",
-    comment: "2025-12: 真的没想到能在PS5上玩到这个游戏，记得几年前在落后的PC上玩卡的不行了，期待PSVR2的更新快点到来",
+    thumbnail:
+      "https://zhangtai.oss-cn-guangzhou.aliyuncs.com/public/img/ms-fs2024.avif",
+    comment:
+      "2025-12: 真的没想到能在PS5上玩到这个游戏，记得几年前在落后的PC上玩卡的不行了，期待PSVR2的更新快点到来",
   },
   {
     id: "3",
     type: "game",
     title: "Balatro",
-    thumbnail: "https://zhangtai.oss-cn-guangzhou.aliyuncs.com/public/img/balatro.avif",
+    thumbnail:
+      "https://zhangtai.oss-cn-guangzhou.aliyuncs.com/public/img/balatro.avif",
     comment: "2024: 经常打了一手好牌过关了结果不记录，好生气又欲罢不能",
   },
 ];
 ---
-<section class="space-y-6 py-6">
-  <h2 class="text-2xl font-bold tracking-tight">最近</h2>
-  <div class="grid gap-1 md:grid-cols-2">
-    {
-      recentItems.map((item) => (
-        <div class="flex items-start gap-4 rounded-lg border p-3 shadow-sm transition-colors hover:bg-muted/50">
-          <div class="shrink-0">
-            <Image
-              src={item.thumbnail}
-              alt={item.title}
-              width={256}
-              height={384}
-              class="h-24 w-16 rounded-md object-cover shadow-sm"
-            />
-          </div>
-          <div class="flex flex-col gap-1">
-            <div class="flex items-center justify-between gap-2">
-              <h3 class="font-semibold leading-tight">{item.title}</h3>
+
+<div
+  class="mx-auto grid w-full max-w-5xl min-w-0 content-center items-start p-4 pt-2 sm:gap-12 sm:p-6 md:grid-cols-1 md:gap-8 lg:p-12"
+>
+  <section class="space-y-6 py-6">
+    <h2 class="text-2xl font-bold tracking-tight">最近</h2>
+    <div class="grid gap-1 md:grid-cols-2">
+      {
+        recentItems.map((item) => (
+          <div class="flex items-start gap-4 rounded-lg border p-3 shadow-sm transition-colors hover:bg-muted/50">
+            <div class="shrink-0">
+              <Image
+                src={item.thumbnail}
+                alt={item.title}
+                width={256}
+                height={384}
+                class="h-24 w-16 rounded-md object-cover shadow-sm"
+              />
             </div>
-            {item.author && <p class="text-sm text-muted-foreground">{item.author}</p>}
-            {item.comment && (
-              <p class="text-sm italic text-foreground/80 mt-1">"{item.comment}"</p>
-            )}
+            <div class="flex flex-col gap-1">
+              <div class="flex items-center justify-between gap-2">
+                <h3 class="font-semibold leading-tight">{item.title}</h3>
+              </div>
+              {item.author && (
+                <p class="text-sm text-muted-foreground">{item.author}</p>
+              )}
+              {item.comment && (
+                <p class="text-sm italic text-foreground/80 mt-1">
+                  "{item.comment}"
+                </p>
+              )}
+            </div>
           </div>
-        </div>
-      ))
-    }
-  </div>
-</section>
+        ))
+      }
+    </div>
+  </section>
+</div>
