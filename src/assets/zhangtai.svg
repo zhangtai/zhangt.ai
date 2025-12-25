@@ -34,13 +34,13 @@
         <path id="Left-eye" serif:id="Left eye"
             d="M1625,1387.5c48.165,41.016 111.899,55.586 187.5,50c0,0 79.044,-8.58 105.268,-15.927c33.626,-9.422 62.729,-40.584 48.899,-38.239l-23.558,-39.813l-34.775,-35.187c-35.645,-12.601 -73.279,-16.16 -112.5,-12.5l-59.966,10.856l-48.368,18.311l-40.398,27.898l-22.102,34.602Z"
             style="transform-box: fill-box; transform-origin: center;fill:#fff;">
-            <animateTransform attributeName="transform" type="scale" values="1 1; 0 1; 0 1; 1 1; 1 1"
+            <animateTransform attributeName="transform" type="scale" values="1 1; 1 0; 1 0; 1 1; 1 1"
                 keyTimes="0; 0.05; 0.15; 0.2; 1" dur="2s" repeatCount="indefinite" additive="sum" />
         </path>
         <path id="Right-eye" serif:id="Right eye"
             d="M2283.333,1395.833c0,0 49.125,46.697 158.333,41.667c109.209,-5.03 109.121,-4.673 141.667,-16.667c32.546,-11.994 32.314,-17.694 41.667,-29.167c9.353,-11.472 -53.133,-64.806 -70.833,-66.667c-17.701,-1.86 -74.839,-38.686 -120.833,-29.167c-45.994,9.519 -112.5,25 -112.5,25c0,0 -29.112,40.337 -33.333,45.833c-4.221,5.497 -4.167,29.167 -4.167,29.167Z"
             style="transform-box: fill-box; transform-origin: center;fill:#fff;">
-            <animateTransform attributeName="transform" type="scale" values="1 1; 0 1; 0 1; 1 1; 1 1"
+            <animateTransform attributeName="transform" type="scale" values="1 1; 1 0; 1 0; 1 1; 1 1"
                 keyTimes="0; 0.05; 0.15; 0.2; 1" dur="2s" repeatCount="indefinite" additive="sum" />
         </path>
         <path id="Left-ear" serif:id="Left ear"
