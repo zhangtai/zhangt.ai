@@ -39,18 +39,29 @@
         <use id="Guangzhou" xlink:href="#_Image1" x="2077.083" y="2106.25" width="46px" height="46px" />
         <path id="Route" d="M2119.56,2092.947l-13.313,16.193l-4.966,-20.366l7.053,11.227l11.227,-7.053Z" />
         <path
-            d="M2954.167,625c0,0 -377.789,334.926 -416.667,508.333c-38.877,173.407 19.423,530.294 0,604.167c-19.423,73.873 -387.547,180.218 -429.167,362.5"
+            d="M2983.333,625c84.809,45.449 -232.438,390.846 -445.833,516.667c-118.768,70.027 -264.044,369.978 0,595.833c24.535,20.986 -387.547,180.218 -429.167,362.5"
             style="fill:none;stroke:#000;stroke-width:6.25px;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;stroke-dasharray:12.5,12.5,0,0,0,0;">
-        <animate attributeName="stroke-dashoffset" values="100;0" dur="3s" calcMode="linear" repeatCount="indefinite" /><animate attributeName="stroke-dashoffset" values="100;0" dur="3s" calcMode="linear" repeatCount="indefinite" />
+            <animate attributeName="stroke-dashoffset" values="100;0" dur="3s" calcMode="linear" repeatCount="indefinite" />
         </path>
-        <text x="2930.423px" y="669.953px"
-            style="font-family:'PingFangSC-Regular', 'PingFang SC', sans-serif;font-size:33.333px;">依兰</text><text
-            x="2572.089px" y="1153.286px"
-            style="font-family:'PingFangSC-Regular', 'PingFang SC', sans-serif;font-size:33.333px;">大连</text><text
-            x="2438.756px" y="1753.286px"
-            style="font-family:'PingFangSC-Regular', 'PingFang SC', sans-serif;font-size:33.333px;">杭州</text><text
-            x="2005.423px" y="2157.453px"
-            style="font-family:'PingFangSC-Regular', 'PingFang SC', sans-serif;font-size:33.333px;">广州</text>
+        <g transform="matrix(4.166667,0,0,4.166667,-62.5,-16.666667)"><text x="714.301px" y="141.789px"
+                style="font-family:'AppleColorEmoji', 'Apple Color Emoji';font-size:8px;">🏡</text><text x="722.301px"
+                y="141.789px"
+                style="font-family:'PingFangSC-Regular', 'PingFang SC', sans-serif;font-size:8px;">依兰</text></g>
+        <g transform="matrix(4.166667,0,0,4.166667,-391.666667,420.833333)"><text x="714.301px" y="141.789px"
+                style="font-family:'AppleColorEmoji', 'Apple Color Emoji';font-size:8px;">🎓</text><text x="714.301px"
+                y="152.989px"
+                style="font-family:'PingFangSC-Regular', 'PingFang SC', sans-serif;font-size:8px;">大连</text></g>
+        <g transform="matrix(4.166667,0,0,4.166667,-575,1162.5)"><text x="714.301px" y="141.789px"
+                style="font-family:'AppleColorEmoji', 'Apple Color Emoji';font-size:8px;">💼</text><text x="722.301px"
+                y="141.789px"
+                style="font-family:'PingFangSC-Regular', 'PingFang SC', sans-serif;font-size:8px;">杭州</text></g>
+        <g transform="matrix(4.166667,0,0,4.166667,-841.666667,1483.333333)"><text x="714.301px" y="141.789px"
+                style="font-family:'AppleColorEmoji', 'Apple Color Emoji';font-size:8px;">👩</text><text x="722.301px"
+                y="141.789px" style="font-family:'AppleColorEmoji', 'Apple Color Emoji';font-size:8px;">❤️</text><text
+                x="730.301px" y="141.789px"
+                style="font-family:'AppleColorEmoji', 'Apple Color Emoji';font-size:8px;">👨</text><text x="714.301px"
+                y="152.989px"
+                style="font-family:'PingFangSC-Regular', 'PingFang SC', sans-serif;font-size:8px;">广州</text></g>
     </g>
     <defs>
         <image id="_Image1" width="46px" height="46px"
