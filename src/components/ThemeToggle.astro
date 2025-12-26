@@ -17,6 +17,7 @@ import { Button } from "@/components/ui/button";
     const storedTheme = localStorage?.getItem("theme");
     const isDark = storedTheme ? storedTheme === "dark" : prefersDark;
     document.documentElement.classList.toggle("dark", isDark);
+    updateJourneySVG(isDark);
     updateIcons(isDark);
   };
 
@@ -24,6 +25,7 @@ import { Button } from "@/components/ui/button";
     const observer = new MutationObserver(() => {
       const isDark = document.documentElement.classList.contains("dark");
       localStorage.setItem("theme", isDark ? "dark" : "light");
+      updateJourneySVG(isDark);
       updateIcons(isDark);
     });
 
@@ -42,6 +44,19 @@ import { Button } from "@/components/ui/button";
     }
   };
 
+  const updateJourneySVG = (isDark) => {
+    const svg = document.getElementById("journeySVG");
+    if (svg) {
+      svg.querySelectorAll("g#provinces path").forEach((path) => {
+        path.style.fill = isDark ? "#FFFF00" : "#EE1C25";
+      });
+      svg.querySelectorAll("g#provinces path.visited").forEach((path) => {
+        path.style.fill = isDark ? "#EE1C25" : "#FFFF00";
+        path.style.stroke = isDark ? "#FFFF00" : "#EE1C25";
+      });
+    }
+  };
+
   const setupToggleButton = () => {
     const button = document.getElementById("themeToggle");
     if (!button) return;
@@ -50,6 +65,7 @@ import { Button } from "@/components/ui/button";
       const isDark = document.documentElement.classList.toggle("dark");
       localStorage.setItem("theme", isDark ? "dark" : "light");
       updateIcons(isDark);
+      updateJourneySVG(isDark);
     });
   };
 

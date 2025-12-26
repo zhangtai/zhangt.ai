@@ -74,3 +74,22 @@ import JourneyImage from "../assets/journey.svg";
         <JourneyImage />
     </div>
 </div>
+
+<script>
+    const isDark = document.documentElement.classList.contains("dark");
+    const updateJourneySVG = (isDark: boolean) => {
+        const svg = document.getElementById("journeySVG");
+        if (svg) {
+            const allPaths = Array.from(svg.querySelectorAll("g#provinces path") as unknown as HTMLCollectionOf<HTMLElement>)
+            const visitedPaths = Array.from(svg.querySelectorAll("g#provinces path.visited") as unknown as HTMLCollectionOf<HTMLElement>)
+            allPaths.forEach((path) => {
+                path.style.fill = isDark ? "#FFFF00" : "#EE1C25";
+            });
+            visitedPaths.forEach((path) => {
+                path.style.fill = isDark ? "#EE1C25" : "#FFFF00";
+                path.style.stroke = isDark ? "#FFFF00" : "#EE1C25";
+            });
+        }
+    };
+    updateJourneySVG(isDark);
+</script>
