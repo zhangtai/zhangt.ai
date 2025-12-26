@@ -36,3 +36,4 @@ If you're new to using React (or other frameworks) inside Astro, start with the 
 This project is licensed under the [MIT License](LICENSE).
 
 - Test webhook 1
+- Test webhook 2
