@@ -1,0 +1,13 @@
+[Unit]
+Description=Bun Webhook Listener
+After=network.target
+
+[Service]
+Type=simple
+User=zhangtai
+WorkingDirectory=/home/zhangtai/.local/share/chezmoi/dot_local/share/snippets/javascript
+ExecStart=/home/linuxbrew/.linuxbrew/bin/bun run webhook.ts
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
