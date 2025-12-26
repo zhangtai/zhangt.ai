@@ -5,7 +5,8 @@ After=network.target
 [Service]
 Type=simple
 User=zhangtai
-WorkingDirectory=/home/zhangtai/.local/share/chezmoi/dot_local/share/snippets/javascript
+Environment=HOSTNAME=dmit
+WorkingDirectory=/home/zhangtai/workspace/javascript/zhangt.ai/assets
 ExecStart=/home/linuxbrew/.linuxbrew/bin/bun run webhook.ts
 Restart=on-failure
 
