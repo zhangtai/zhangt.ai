@@ -16,23 +16,26 @@ const posts = (await getCollection("blog")).sort(
 	description="This template helps you build apps with Astro, Tailwind CSS, and shadcn/ui."
 >
 	<div
-		class="mx-auto grid w-full max-w-5xl min-w-0 content-center items-start gap-8 p-4 pt-2 sm:gap-12 sm:p-6 md:grid-cols-2 md:gap-8 lg:p-12 2xl:max-w-6xl"
+		class="mx-auto grid w-full max-w-5xl min-w-0 content-center items-start gap-8 p-4 pt-2"
 	>
-		<section>
-			<ul>
+		<div class="max-w-3xl mx-auto px-6 py-16">
+			<h1 class="text-3xl font-bold mb-12 text-foreground">Blog</h1>
+			<div class="space-y-2">
 				{
 					posts.map((post) => (
-						<li>
-							<a href={`/blog/${post.id}/`}>
-								<h4 class="title">{post.data.title}</h4>
-								<p class="date">
-									<FormattedDate date={post.data.pubDate} />
-								</p>
-							</a>
-						</li>
+						<article class=" border-b border-border">
+							<div class="shrink-0 min-w-24 text-sm font-semibold tracking-widest text-muted-foreground">
+								<FormattedDate date={post.data.pubDate} />
+							</div>
+							<div class="flex-1 min-w-0">
+								<h2 class="text-lg font-semibold text-foreground hover:text-muted-foreground transition-colors duration-200 cursor-pointer line-clamp-2">
+									<a href={`/blog/${post.id}/`}>{post.data.title}</a>
+								</h2>
+							</div>
+						</article>
 					))
 				}
-			</ul>
-		</section>
+			</div>
+		</div>
 	</div>
 </BaseLayout>
