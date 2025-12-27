@@ -6,6 +6,7 @@ const posts = (await getCollection("blog")).sort(
 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
 ---
+
 <BaseLayout
 	title="张泰的博客 | zhangt.ai"
 	description="This template helps you build apps with Astro, Tailwind CSS, and shadcn/ui."
@@ -20,11 +21,11 @@ const posts = (await getCollection("blog")).sort(
 							<FormattedDate date={post.data.pubDate} />
 						</div>
 						<div class="flex-1 min-w-0">
-							<h2 class="text-lg font-semibold text-foreground hover:text-muted-foreground transition-colors duration-200 cursor-pointer line-clamp-2">
-								<a href={`/blog/${post.id}/`}>
+							<a href={`/blog/${post.id}/`}>
+								<h2 class="text-lg font-semibold text-foreground hover:text-muted-foreground transition-colors duration-200 cursor-pointer line-clamp-2">
 									{post.data.title}
-								</a>
-							</h2>
+								</h2>
+							</a>
 						</div>
 					</article>
 				))
