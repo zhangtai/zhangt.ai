@@ -1,5 +1,6 @@
 ---
 title: '2025 总结'
+description: A year review
 pubDate: '2025-12-31'
 ---
 
