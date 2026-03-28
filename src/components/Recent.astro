@@ -3,9 +3,10 @@ import { Image } from "astro:assets";
 
 interface RecentItem {
   id: string;
-  type: "book" | "music" | "movie" | "game";
+  type: "book" | "music" | "movie" | "game" | "coding" | "life";
+  date: string;
   title: string;
-  thumbnail: string;
+  thumbnail?: string;
   author?: string;
   comment?: string;
 }
@@ -14,44 +15,63 @@ const recentItems: RecentItem[] = [
   {
     id: "1",
     type: "movie",
+    date: "2025-12",
     title: "Zootopia 2",
     thumbnail:
       "https://zhangtai.oss-cn-guangzhou.aliyuncs.com/public/img/media/zootopia-2-poster.avif",
-    comment: "2025-12: 感觉狐狸的话有点少，更期待他多些出场",
+    comment: "感觉狐狸的话有点少，更期待他多些出场",
   },
   {
     id: "2",
     type: "game",
+    date: "2025-12",
     title: "Microsoft Flight Simulator 2024",
     thumbnail:
       "https://zhangtai.oss-cn-guangzhou.aliyuncs.com/public/img/media/ms-fs2024.avif",
     comment:
-      "2025-12: 真的没想到能在PS5上玩到这个游戏，记得几年前在落后的PC上玩卡的不行了，期待PSVR2的更新快点到来",
+      "真的没想到能在PS5上玩到这个游戏，记得几年前在落后的PC上玩卡的不行了，期待PSVR2的更新快点到来",
   },
   {
     id: "3",
     type: "game",
+    date: "Since 2024",
     title: "Balatro",
     thumbnail:
       "https://zhangtai.oss-cn-guangzhou.aliyuncs.com/public/img/media/balatro.avif",
-    comment: "Since 2024: 经常打了一手好牌过关了结果不记录，好生气又欲罢不能",
+    comment: "经常打了一手好牌过关了结果不记录，好生气又欲罢不能",
   },
   {
     id: "4",
     type: "movie",
+    date: "2025-12",
     title: "2001: A Space Odyssey",
     thumbnail:
       "https://zhangtai.oss-cn-guangzhou.aliyuncs.com/public/img/media/2001_A_Space_Odyssey.avif",
-    comment: "2025-12: 二刷，期间还是没控制住睡着了一次，我可是从来不睡午觉的...",
+    comment: "二刷，期间还是没控制住睡着了一次，我可是从来不睡午觉的...",
   },
   {
     id: "5",
     type: "game",
+    date: "2026-01",
     title: "Just Dance 2026",
     thumbnail:
       "https://zhangtai.oss-cn-guangzhou.aliyuncs.com/public/img/media/just-dance-2026.avif",
-    comment: "2026-01: 去年买的游戏，最近才开始和儿子晚上一起玩，买了一年会员",
+    comment: "去年买的游戏，最近才开始和儿子晚上一起玩，买了一年会员",
   },
+  {
+    id: "6",
+    type: "coding",
+    date: "2026-03",
+    title: "UART Protocol",
+    comment: "过年这两个以来一直在研究UART Protocol，用树莓派和ESP32的设备和电脑通信，两边写好软件之后可以互相控制，所以卖掉了StreamDeck开发了自己的控制器。更重要的是发现了树莓派的 Serial Login Shell",
+  },
+  {
+    id: "7",
+    type: "life",
+    date: "2026-03",
+    title: "潮州旅行",
+    comment: "趁着天气还没热，在省内旅游，没想到人这么多，据说还没有过年时候多"
+  }
 ];
 ---
 
@@ -62,20 +82,22 @@ const recentItems: RecentItem[] = [
     <h2 class="text-2xl font-bold tracking-tight">最近</h2>
     <div class="grid gap-1 md:grid-cols-2">
       {
-        recentItems.map((item) => (
+        recentItems.sort((a, b) => b.id.localeCompare(a.id)).map((item) => (
           <div class="flex items-start gap-4 rounded-lg border p-3 shadow-sm transition-colors hover:bg-muted/50">
-            <div class="shrink-0">
-              <Image
-                src={item.thumbnail}
-                alt={item.title}
-                width={256}
-                height={384}
-                class="h-24 w-16 rounded-md object-cover shadow-sm"
-              />
-            </div>
+            {item.thumbnail && (
+              <div class="shrink-0">
+                <Image
+                  src={item.thumbnail}
+                  alt={item.title}
+                  width={256}
+                  height={384}
+                  class="h-24 w-16 rounded-md object-cover shadow-sm"
+                />
+              </div>
+            )}
             <div class="flex flex-col gap-1">
               <div class="flex items-center justify-between gap-2">
-                <h3 class="font-semibold leading-tight">{item.title}</h3>
+                <h3 class="font-semibold leading-tight">{item.title} - {item.date}</h3>
               </div>
               {item.author && (
                 <p class="text-sm text-muted-foreground">{item.author}</p>
