@@ -32,7 +32,7 @@ import {
   TagsInput,
   TagsTrigger,
   TagsValue,
-} from '@/components/ui/shadcn-io/tags';
+} from "@/components/ui/shadcn-io/tags";
 
 export function UserTags() {
   return (
@@ -52,56 +52,43 @@ export function UserTags() {
       </Tags>
     </Field>
   );
-};
+}
 
 export function Framework() {
   return (
     <Field>
-      <FieldLabel htmlFor="small-form-framework"
-      >Framework</FieldLabel
-      >
+      <FieldLabel htmlFor="small-form-framework">Framework</FieldLabel>
       <Combobox items={["Astro"]} defaultValue={"Astro"}>
-        <ComboboxInput
-          id="small-form-framework"
-          placeholder="Select a framework"
-          required
-        />
+        <ComboboxInput id="small-form-framework" placeholder="Select a framework" required />
         <ComboboxContent>
-          <ComboboxEmpty
-          >No frameworks found.</ComboboxEmpty
-          >
+          <ComboboxEmpty>No frameworks found.</ComboboxEmpty>
           <ComboboxList>
-            {
-              (item) => (
-                <ComboboxItem
-                  key={item}
-                  value={item}
-                >
-                  {item}
-                </ComboboxItem>
-              )
-            }
+            {(item) => (
+              <ComboboxItem key={item} value={item}>
+                {item}
+              </ComboboxItem>
+            )}
           </ComboboxList>
         </ComboboxContent>
       </Combobox>
     </Field>
-  )
+  );
 }
 
 export function Role() {
-  return (<Field>
-    <FieldLabel htmlFor="small-form-role">Role</FieldLabel>
-    <Select defaultValue={"developer"}>
-      <SelectTrigger id="small-form-role">
-        <SelectValue />
-      </SelectTrigger>
-      <SelectContent>
-        <SelectGroup>
-          <SelectItem value="developer"
-          >Developer</SelectItem
-          >
-        </SelectGroup>
-      </SelectContent>
-    </Select>
-  </Field>)
+  return (
+    <Field>
+      <FieldLabel htmlFor="small-form-role">Role</FieldLabel>
+      <Select defaultValue={"developer"}>
+        <SelectTrigger id="small-form-role">
+          <SelectValue />
+        </SelectTrigger>
+        <SelectContent>
+          <SelectGroup>
+            <SelectItem value="developer">Developer</SelectItem>
+          </SelectGroup>
+        </SelectContent>
+      </Select>
+    </Field>
+  );
 }

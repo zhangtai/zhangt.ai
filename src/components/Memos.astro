@@ -1,0 +1,157 @@
+---
+import FormattedDate from "./FormattedDate.astro";
+
+interface Memo {
+  name: string;
+  state: string;
+  creator: string;
+  createTime: string;
+  updateTime: string;
+  content: string;
+  visibility: string;
+  tags: string[];
+  pinned: boolean;
+  property?: {
+    title?: string;
+  };
+}
+
+let memos: Memo[] = [];
+let error: string | null = null;
+
+try {
+  const response = await fetch("https://memos.tying.us/api/v1/memos?pageSize=20&filter=creator%3D%3D%27users%2Fzhangtai%27", {
+    method: "GET",
+    headers: {
+      "Authorization": "Bearer memos_pat_F2UGvPgRPizPMGUrjAh0zFnOFODwTSPm",
+      "Content-Type": "application/json",
+    },
+  });
+
+  if (!response.ok) {
+    throw new Error(`Failed to fetch memos: ${response.status} ${response.statusText}`);
+  }
+
+  const data = await response.json();
+  memos = data.memos || [];
+} catch (e: any) {
+  console.error("Error fetching memos:", e);
+  error = e.message || "Failed to load memos";
+  
+  // Fallback data in case the fetch fails during build/development
+  memos = [
+    {
+      name: "memos/fallback-1",
+      state: "NORMAL",
+      creator: "users/zhangtai",
+      createTime: new Date().toISOString(),
+      updateTime: new Date().toISOString(),
+      content: "⚠️ **无法加载最新便签**\n\n当前无法连接到 Memos API。这是展示的本地缓存/备份便签内容。",
+      visibility: "PUBLIC",
+      tags: ["系统"],
+      pinned: true,
+    }
+  ];
+}
+
+// Display the most recent 20 posts
+const visibleMemos = memos.slice(0, 20);
+
+// Simple markdown-to-html helper function
+function parseMarkdown(text: string): string {
+  if (!text) return "";
+  
+  // Escape HTML tags to prevent XSS/rendering issues
+  let html = text
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;");
+
+  // Bold (**text**)
+  html = html.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>");
+
+  // Italic (*text*)
+  html = html.replace(/\*(.*?)\*/g, "<em>$1</em>");
+
+  // Code inline (`code`)
+  html = html.replace(/`(.*?)`/g, "<code class='bg-muted px-1.5 py-0.5 rounded font-mono text-sm border border-border/40'>$1</code>");
+
+  // Links ([text](url))
+  html = html.replace(/\[(.*?)\]\((.*?)\)/g, "<a href='$2' target='_blank' rel='noopener noreferrer' class='text-primary font-medium underline underline-offset-4 hover:text-primary/80 transition-colors'>$1</a>");
+
+  // Autolink bare URLs
+  const urlRegex = /(?<!href=")(https?:\/\/[^\s<]+)/g;
+  html = html.replace(urlRegex, '<a href="$1" target="_blank" rel="noopener noreferrer" class="text-primary font-medium underline underline-offset-4 hover:text-primary/80 transition-colors">$1</a>');
+
+  // Tag (#tag) - only match if preceded by space or start of line
+  html = html.replace(/(?:^|\s)#([^\s#]+)/g, (match, tag) => {
+    return ` <span class="inline-flex items-center rounded-md bg-primary/10 px-2 py-0.5 text-xs font-medium text-primary ring-1 ring-inset ring-primary/20">#${tag}</span>`;
+  });
+
+  // Line breaks
+  html = html.replace(/\n/g, "<br />");
+
+  return html;
+}
+---
+
+<div class="mx-auto w-full max-w-5xl min-w-0 p-4 sm:p-6 lg:p-12 pt-0 sm:pt-0 lg:pt-0">
+  <section class="space-y-6 py-6">
+    <div class="flex items-center justify-between border-b pb-4">
+      <div class="space-y-1">
+        <h2 class="text-2xl font-bold tracking-tight flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>
+          便签
+        </h2>
+        <p class="text-sm text-muted-foreground">微言大义，碎碎念与技术随感</p>
+      </div>
+      {error && (
+        <span class="inline-flex items-center gap-1.5 rounded-full bg-amber-500/10 px-2.5 py-0.5 text-xs font-medium text-amber-600 dark:text-amber-400">
+          <span class="h-1.5 w-1.5 rounded-full bg-amber-500"></span>
+          离线模式
+        </span>
+      )}
+    </div>
+
+    {visibleMemos.length === 0 ? (
+      <div class="text-center py-12 text-muted-foreground border rounded-lg bg-card/50">
+        暂无便签记录
+      </div>
+    ) : (
+      <div class="divide-y divide-border/60 border rounded-xl bg-card shadow-sm overflow-hidden">
+        {visibleMemos.map((memo) => {
+          const isPinned = memo.pinned;
+          const dateObj = new Date(memo.createTime);
+          const formattedContent = parseMarkdown(memo.content);
+
+          return (
+            <div class={`px-4 py-2.5 transition-colors hover:bg-muted/15 relative flex items-baseline ${isPinned ? 'bg-amber-500/[0.02]' : ''}`}>
+              <div class="text-sm select-text break-words w-full">
+                <span class="inline-flex items-center gap-1 mr-2 text-xs font-mono text-muted-foreground/80 select-none">
+                  {isPinned && (
+                    <span class="text-amber-500 mr-0.5" title="置顶">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="inline"><line x1="12" x2="12" y1="17" y2="22"/><path d="M5 17h14v-1.76a2 2 0 0 0-.44-1.24l-2.78-3.5A2 2 0 0 1 15 9.26V5a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v4.26a2 2 0 0 1-.78 1.24l-2.78 3.5A2 2 0 0 0 5 15.24Z"/></svg>
+                    </span>
+                  )}
+                  <FormattedDate date={dateObj} />:
+                </span>
+                <span class="text-foreground/90 leading-relaxed inline prose prose-sm dark:prose-invert max-w-none [&>p]:inline [&>p]:m-0" set:html={formattedContent} />
+              </div>
+            </div>
+          );
+        })}
+
+        {/* Read More button directly merged inside the container */}
+        <a
+          href="https://memos.tying.us/u/zhangtai"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="flex w-full items-center justify-center gap-2 px-4 py-3 text-sm font-medium text-foreground/80 hover:text-foreground hover:bg-muted/50 transition-all duration-200 group"
+        >
+          阅读更多
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform duration-200 group-hover:translate-x-0.5"><line x1="5" x2="19" y1="12" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+    )}
+  </section>
+</div>
