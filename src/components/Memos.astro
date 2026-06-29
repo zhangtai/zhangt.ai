@@ -77,10 +77,10 @@ function parseMarkdown(text: string): string {
   html = html.replace(/`(.*?)`/g, "<code class='bg-muted px-1.5 py-0.5 rounded font-mono text-sm border border-border/40'>$1</code>");
 
   // Links ([text](url))
-  html = html.replace(/\[(.*?)\]\((.*?)\)/g, "<a href='$2' target='_blank' rel='noopener noreferrer' class='text-primary font-medium underline underline-offset-4 hover:text-primary/80 transition-colors'>$1</a>");
+  html = html.replace(/\[(.*?)\]\((.*?)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer" class="text-primary font-medium underline underline-offset-4 hover:text-primary/80 transition-colors">$1</a>');
 
   // Autolink bare URLs
-  const urlRegex = /(?<!href=")(https?:\/\/[^\s<]+)/g;
+  const urlRegex = /(?<!href=")(?<!href=')(https?:\/\/[^\s'"<()]+)/g;
   html = html.replace(urlRegex, '<a href="$1" target="_blank" rel="noopener noreferrer" class="text-primary font-medium underline underline-offset-4 hover:text-primary/80 transition-colors">$1</a>');
 
   // Tag (#tag) - only match if preceded by space or start of line
