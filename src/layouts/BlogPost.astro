@@ -3,7 +3,6 @@ import type { CollectionEntry } from 'astro:content';
 import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import FormattedDate from '../components/FormattedDate.astro';
-import Header from '../components/Header.astro';
 import '../styles/global.css'
 
 type Props = CollectionEntry<'blog'>['data'];
@@ -14,6 +13,13 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 <html lang="en">
 	<head>
 		<BaseHead title={title} description={description} />
+		<script is:inline>
+			const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+			document.documentElement.classList.toggle("dark", mediaQuery.matches);
+			mediaQuery.addEventListener("change", (e) => {
+				document.documentElement.classList.toggle("dark", e.matches);
+			});
+		</script>
 		<style>
 			main {
 				width: calc(100% - 2em);
@@ -54,7 +60,6 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 	</head>
 
 	<body>
-		<Header />
 		<main>
 			<article>
 				<div class="prose dark:prose-invert">
